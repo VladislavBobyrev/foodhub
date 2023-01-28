@@ -1,0 +1,15 @@
+@mixin container-fix {
+  margin: 0 auto;
+  max-width: adaptiv-prop(1440, 280);
+  width: 100%;
+}
+
+@mixin title{
+}
+
+@mixin subtitle {
+}
+
+@mixin button {
+  cursor: pointer;
+}
