@@ -1,0 +1,70 @@
+.best {
+  @include padding-block;
+  position: relative;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(../../../public/raw-serving.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: adaptiv-prop(250, 80);
+    height: adaptiv-prop(250, 150);
+    background-size: contain;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../../public/cola.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: adaptiv-prop(100, 50);
+    height: adaptiv-prop(200, 100);
+    background-size: contain;
+  }
+}
+
+.best__container {
+  @include container-fix;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  @media all and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.best-info {
+  margin: auto;
+  gap: 2rem;
+}
+
+.best-info__text {
+  @include text;
+  margin-bottom: 4rem;
+}
+
+.best-info__title {
+  @include title;
+  margin-bottom: 2rem;
+}
+
+.best__graphick {
+  margin: auto;
+  max-width: 100%;
+}
+
+.best-info__button {
+  @include button
+}
+
+.best-info__button--accent {
+  background: $brand;
+  color: $secondary;
+}

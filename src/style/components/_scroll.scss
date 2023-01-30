@@ -1,0 +1,19 @@
+/* Works on Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $brand $primary-700 ;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $primary-700;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:  $brand;
+  border-radius: 5px;
+}

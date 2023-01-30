@@ -1,0 +1,141 @@
+.popular {
+  @include padding-block;
+  position: relative;
+
+  &::before {
+    content: url(../../../public/tomato.png);
+    position: absolute;
+    top: 150px;
+    right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 200px;
+    right: 0;
+    background-image: url(../../../public/tomato.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: adaptiv-prop(100, 50);
+    height: adaptiv-prop(200, 100);
+    background-size: contain;
+  }
+}
+
+.popular__cantainer {
+  @include container-fix;
+}
+
+.popular__title {
+  @include title;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.popular-nav {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 9rem;
+
+  @media all and (max-width: 1200px) {
+    gap: 4%;
+  }
+}
+
+.popular-nav__link {
+  font-weight: 600;
+  font-size: adaptiv-prop(30, 24);
+  line-height: 150%;
+  color: $primary-700;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $brand;
+  }
+}
+
+.popular-nav__link--active {
+  color: $brand;
+  border-bottom: 1px solid $brand;
+}
+
+.popular-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 440px));
+  column-gap: 3rem;
+  row-gap: 7rem;
+  justify-content: center;
+}
+
+.popular-list__item {
+  background: $secondary-300;
+  border-radius: 30px;
+
+  padding: 20px 20px 20px 20px;
+  position: relative;
+  border-bottom: 4px solid $secondary-300;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid $brand-700;
+  }
+}
+
+.popular-list__image {
+  display: block;
+  margin: auto;
+  margin-top: -100px;
+  margin-bottom: 3rem;
+  max-width: 100%;
+}
+
+.popular-list__price {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  transform: translate(0, -70%);
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: $brand;
+  color: $secondary;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popular-list__title {
+  font-weight: 600;
+  font-size: 24px;
+  color: $primary;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.popular-list-box {
+  display: flex;
+  align-items: center;
+}
+
+.popular-list-box__text {
+  margin-left: 0.5rem;
+  color: $primary-700;
+}
+
+.popular-list__people {
+  margin-left: auto;
+}
+
+.popular-list-box__svg {
+  max-width: 40px;
+  height: 40px;
+}

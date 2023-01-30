@@ -1,0 +1,41 @@
+.service {
+  @include padding-block;
+}
+.service__container {
+  @include container-fix;
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 100px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.service-card__item {
+    padding: 120px 48px 48px;
+    background: $secondary-300;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.service-card__cercle {
+  width: 150px;
+  height: 150px;
+  border-radius:50%;
+  background: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.service-card__title {
+  font-weight: 600;
+    font-size: 31px;
+    line-height: 128%;
+    color: $primary;
+}

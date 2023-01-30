@@ -1,3 +1,12 @@
+.html-hidden {
+  overflow: hidden;
+}
 .page {
-  height: calc(var(--vh) * 100)
+  height: calc(var(--vh, 1dvh) * 100);
+  background-color: $secondary;
+  font-family: Open sans;
+}
+
+:focus-visible {
+  outline: 1px solid $brand-700;
 }

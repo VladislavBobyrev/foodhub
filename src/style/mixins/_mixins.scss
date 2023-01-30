@@ -4,12 +4,44 @@
   width: 100%;
 }
 
-@mixin title{
+@mixin title {
+  font-weight: 700;
+  font-size: adaptiv-prop(85, 34);
+  line-height: 116%;
+  color: $primary;
 }
 
-@mixin subtitle {
+@mixin text {
+  font-size: adaptiv-prop(20, 18);
+  line-height: 160%;
+  color: $primary-700;
 }
 
 @mixin button {
+  font-weight: 700;
+  font-size: adaptiv-prop(20, 18);
+  line-height: 160%;
+  color: $brand;
+  padding: adaptiv-prop(22, 16) adaptiv-prop(44, 32);
+  background: #3c3f4a;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  border: 0;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 15px 50px rgb(171 172 175 / 10%);
+  }
+}
+
+@mixin padding-block {
+  padding: adaptiv-prop(130, 30) 0;
+}
+
+@mixin footer-title {
+  font-weight: 600;
+  font-size: adaptiv-prop(24, 22);
+  line-height: 162%;
+  color: $primary;
+  margin-bottom: 2rem;
 }
