@@ -1,0 +1,80 @@
+.get {
+  @include padding-block;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-image: url(../../../public/lemon.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: adaptiv-prop(100, 50);
+    height: adaptiv-prop(200, 100);
+    background-size: contain;
+    transform: rotate(-180deg)
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -20px;
+    background-image: url(../../../public/raw-discont.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: adaptiv-prop(200, 100);
+    height: adaptiv-prop(300, 200);
+    background-size: contain;
+  }
+}
+
+.get__conteiner {
+  @include container-fix;
+}
+
+.get-card {
+  padding: adaptiv-prop(100, 30) adaptiv-prop(100, 30) 0; 
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 2rem;
+  justify-content: space-between;
+  background-color: $secondary-300;
+  align-items: center;
+
+  @media all and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.get-card__title {
+  font-weight: 700;
+  font-size: adaptiv-prop(58, 38);
+  line-height: 117%;
+  color: $primary;
+  margin-bottom: 6rem;
+
+  @media all and (max-width: 1200px) {
+    margin-bottom: 3rem;
+  }
+}
+
+.get-card__button {
+  @include button;
+  display: flex;
+  width: max-content;
+  margin-bottom: 2rem;
+}
+
+.get-card__button--accent {
+  background: $brand;
+  color: $secondary;
+}
+
+.get-card__image {
+  max-width: 100%;
+  margin:auto;
+  margin-bottom: 0;
+}

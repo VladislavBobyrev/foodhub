@@ -1,0 +1,20 @@
+.slick-slider .slick-list {
+  overflow: visible;
+}
+
+.slick-slider .slick-dots li button {
+  background:$secondary-300;
+  border-radius:50%;
+
+  &:hover {
+    background: $brand;
+  }
+}
+
+.slick-slider .slick-dots li button:before {
+  content: none;
+}
+
+.slick-slider  li.slick-active button {
+  background: $brand-700;
+}

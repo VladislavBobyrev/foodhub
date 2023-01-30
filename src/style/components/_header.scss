@@ -1,0 +1,190 @@
+.header {
+  position: relative;
+  padding: adaptiv-prop(30, 20) 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-image: url(../../public/raw.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    width: adaptiv-prop(100, 50);
+    height: adaptiv-prop(200, 100);
+    background-size: contain;
+  }
+}
+
+.header__container {
+  @include container-fix;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-button {
+  display: flex;
+  gap: 1.5rem;
+
+  @media all and (max-width: 1200px) {
+    gap: 0;
+  }
+}
+
+.header-button__bag {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 3px;
+  background: $brand;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  &::before {
+    content: '3';
+    position: absolute;
+    top: -0.6rem;
+    right: -0.3rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header-button__login {
+  font-size: 20px;
+  line-height: 120%;
+  color: $primary-800;
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    color: $brand;
+  }
+}
+
+.header-logo {
+  color: $primary;
+  display: inline-flex;
+  font-size: adaptiv-prop(30, 26);
+  position: relative;
+  z-index: 2;
+}
+
+.header-logo__span {
+  color: $brand;
+}
+
+.header__button {
+  position: relative;
+  z-index: 2;
+}
+
+.header__logo {}
+
+.header__nav {}
+
+.nav {
+  @media all and (max-width: 1200px) {
+    transition: 0.3s ease-in-out;
+    transform: translateX(100%);
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 1;
+    padding: 2rem 1rem;
+    overflow: auto;
+  }
+}
+
+.nav--active {
+  transform: translateX(0);
+}
+.nav__item {}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+
+  
+  @media all and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.nav__link {
+  font-size: 20px;
+  line-height: 120%;
+  color: $primary-800;
+
+  &:hover {
+    color: $brand;
+  }
+}
+
+.header__burger {
+  display: none;
+
+  @media all and (max-width: 1200px) {
+    position: relative;
+    z-index: 2;
+    display: block;
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 5px;
+      background-color: $primary;
+      margin: auto;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+
+      top: 5px;
+      right: 0;
+      width: 75%;
+      transform-origin: right;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      background-color: $primary;
+      margin: auto;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+
+      bottom: 5px;
+      right: 0;
+      transform-origin: right;
+      background-color: $brand;
+    }
+  }
+}
+
+.burger--active {
+  &::before {
+    width: 100%;
+  }
+  &::after {
+    width: 75%;
+  }
+}

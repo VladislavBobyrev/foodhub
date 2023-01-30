@@ -1,0 +1,101 @@
+.discont {
+  @include padding-block;
+  position: relative;
+  
+  &::before {
+    content:url(../../../public/hot-discont.png);
+    position: absolute;
+    top: 13%;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.discont__container {
+  @include container-fix;
+}
+
+.discont-card {
+  padding: adaptiv-prop(110, 30) adaptiv-prop(145, 40);
+  background: $brand;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+
+  &::before {
+    content:url(../../../public/raw-discont.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0%, -50%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content:url(../../../public/raw-discont.png);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, 0%) rotate(-90deg);
+  }
+}
+
+.discont-card__title {
+  text-align: center;
+  color: $secondary;
+  font-weight: 700;
+  font-size: adaptiv-prop(58, 38);
+  line-height: 134%;
+}
+
+.discont__text-accent {
+  color: $primary;
+}
+.discont-card__description {
+  font-weight: 600;
+  font-size: adaptiv-prop(20, 18);
+  line-height: 160%;
+  text-align: center;
+  color: $secondary;
+  max-width: 960px;
+
+  @media all and (max-width: 1200px) {
+    
+  }
+}
+
+
+.discont-card-box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  @media all and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.discont-card-box__button {
+  @include button;
+  font-size: adaptiv-prop(20, 16)
+}
+
+.discont-card-box__button--color-light {
+  background: $primary;
+  color: $secondary;
+
+  &:hover {
+    background:$secondary-300 ;
+    color: $primary;
+  }
+}
+
+.discont-card-box__button--color-dark {
+  color: $primary;
+
+  &:hover {
+    background: $brand-700 ;
+    color: $secondary;
+  }
+}
