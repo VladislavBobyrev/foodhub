@@ -24,7 +24,7 @@
   position: relative;
 
   &::before {
-    content:url(../../../public/raw-discont.png);
+    content:url(../../../public/raw-discont.webp);
     position: absolute;
     top: 0;
     right: 0;
@@ -33,7 +33,7 @@
   }
 
   &::after {
-    content:url(../../../public/raw-discont.png);
+    content:url(../../../public/raw-discont.webp);
     position: absolute;
     top: 50%;
     left: 0;
